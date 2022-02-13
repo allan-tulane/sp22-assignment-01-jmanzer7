@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name:** James Manzer & Luke Albright
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -12,20 +12,27 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
-.  
-.  
-.  
-. 
-  - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
-.  
-.  
-.  
+
+.  There exists two constants. Let c ∈ R+ and n0 ∈ N. For 
+.  n ≥ n0, f(n) <= c * g(n). With c = 2 and n0 = 1,
+.  2 * 2^n >= 2^n+1 for all n >= 1. Therefore, 
+.  2^n+1 is O(2^n)
+
+  - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?  
+
+.  No, because there doesn't exist two constants c ∈ R+ 
+.  and n0 ∈ N s.t. c * 2^n >= 2^2^n.
+
+  ln2 * 2^n <= lnc + ln2 * n
+  2^n <= lnc + n
+.  n <= lnc
+.  There is no c s.t. lnc <= n for all n >= n0, therefore 2^2^n is not O(2^n).
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
 .  
-.  
+There exists two constants. Let c ∈ R+ and n0 ∈ N. For 
+.  n ≥ n0, n^1.01 <= c * (logn)^2.
+.  n^1.01 = c*logn*logn
 .  
 .  
 
