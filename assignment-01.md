@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:** James Manzer & Luke Albright
+**Name:** James Manzer
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -32,22 +32,36 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 .  
 There exists two constants. Let c ∈ R+ and n0 ∈ N. For 
 .  n ≥ n0, n^1.01 <= c * (logn)^2.
-.  n^1.01 = c*logn*logn
-.  
+.  n^1.01 = c*logn*logn. Using L/Hospital's rule,
+  1.01n^.01 = (c * 2logn)/n
+  lim n -> infinity of 1.01n^.01 = (c * 2logn)/n is infinity
+.  Therefore, n^1.01 is not in O(\mathrm{log}^2 n)$, because it is in Ω.
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
 .  
-.  
+.  Taking the derivative of f(n) and g(n), and using L'hospital's rule, f(n) does not asymptotitacly dominate g(n). * using the same work from above (1c)*, f(n) is in Ω
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
 .  
-.  
-.  
+.  There exists two constants. Let c ∈ R+ and n0 ∈ N. For 
+.  n ≥ n0, f(n) <= c * g(n). 
+
+   sqrt(n) = (log(n)^3)*c. Using l'hospital's rule,
+   (n^-1/2)/2 = c * 3log^2(n)/n
+
+   lim n -> infinity = 0, therefore f(n) is in O g(n)
+  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
 .  
+There exists two constants. Let c ∈ R+ and n0 ∈ N. For 
+.  n ≥ n0, f(n) <= c * g(n).
+
+Using the same work from 1e, because the lim n -> infinity is 0, f(n) is in O g(n), not Omega.
+
+The functions cross at approximately 3.675, and therefore f(n) is in O g(n) after no of 3.675
 
 
 2. **SPARC to Python** (12 pts)
