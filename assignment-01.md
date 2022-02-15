@@ -83,7 +83,7 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
+.  This function simulates a Fibonacci sequence. First, it checks if x is less than or equal to one, and returns x if this is the case. Otherwise, it creates two variables, ra and rb, and sets them equal to the recursive call of the foo function, with the input being x-1 and x-2 respectively. It then returns the sum of ra and rb, whose sum is the next number in the Fibonacci sequence.
 .  
 .  
 .  
