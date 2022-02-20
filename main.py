@@ -13,9 +13,18 @@ def foo(x):
     return (ra + rb)
 
 
-def longest_run(mylist, key):
-    ### TODO
-    pass
+def longest_run(myarray, key):
+    max_count, count = 0, 0
+    for i in range(1, len(myarray)):
+        if myarray[i-1] != key:
+            if count >= max_count:
+                max_count = count
+                count = 0
+        else:
+            count +=1
+    if count > max_count:
+        max_count = count
+    return max_count
 
 
 class Result:
@@ -32,8 +41,11 @@ class Result:
     
     
 def longest_run_recursive(mylist, key):
-    ### TODO
-    pass
+    mid = len(mylist))//2
+    right = mylist[:mid]
+    left = mylist[mid:]
+
+    for
 
 ## Feel free to add your own tests here.
 def test_longest_run():

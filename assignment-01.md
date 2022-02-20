@@ -112,12 +112,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
   - 3a. (7 pts) First, implement an iterative, sequential version of `longest_run` in `main.py`.  
 
   - 3b. (4 pts) What is the Work and Span of this implementation?  
-
-.  
-.  
-.  
-.  
-.  
+    Work and span are both O(n). This is because this implementation is sequential and iterates through the array only once.
 .  
 .  
 .  
@@ -129,7 +124,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
   - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  
 .  
 .  
-.  
+.  Work and span for this sequential algorithm is O(n) and O(log(n))
 .  
 .  
 .  
@@ -144,7 +139,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
 .  
 .  
-.  
+.   Work and span for this sequential algorithm is O(n) and O(n)
 .  
 .  
 .  
